@@ -60,6 +60,6 @@ exonerate -q file -t target --exhaustive False --showtargetgff -n 1 -m est2genom
 ### 2. Classification
 
 To classify the alignments the parameter *--ryo "# %qi %ql %qab %qae %qal %ti %tab %tae %pi\\n"* is used for give some 
-information about the query length, alignment lenght and etc. Through this data is possible to classify the alignment in: 
+information about the query length, alignment lenght, etc. Through this data is possible to classify the alignment in: 
 **perfect** 100% of identity and coverage; **not perfect** less than 100% of identity and coverage; **not aligned** no 
 alignment was generated.
