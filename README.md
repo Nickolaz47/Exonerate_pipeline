@@ -1,7 +1,7 @@
 # Exonerate Pipeline
 
 >The main objective of this pipeline is speed up the Exonerate analysis using core parallelism. Furthermore, the script
->classify the alignments in not aligned, not perfect and perfect.
+>classifies the alignments in not aligned, not perfect and perfect.
 
 ## Dependencies
 
@@ -16,7 +16,7 @@
 
 After install the external program, download the repository:
 ```
-git clone https://github.com/Nickolaz47/
+git clone https://github.com/Nickolaz47/Exonerate_pipeline.git
 ```
 Enter the folder and install the python libraries:
 ```
@@ -39,6 +39,7 @@ python3 exonerate_pipe.py -q gene/protein fasta input -t genome fasta input  -c 
 - **-t**: Genome fasta subject. 
 - **-c**: Core numbers to use (default 4).
 - **-m**: Alignment mode (mrna or ptn).
+- **-h**: Show the help.
 
 ## Algorithm
 
