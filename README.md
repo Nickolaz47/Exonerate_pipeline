@@ -37,7 +37,7 @@ python3 exonerate_pipe.py -q gene/protein fasta input -t genome fasta input  -c 
 
 - **-q**: Gene/protein fasta query.
 - **-t**: Genome fasta subject. 
-- **-c**: Core numbers to use (default 4).
+- **-c**: Core numbers to use (default 8).
 - **-m**: Alignment mode (mrna or ptn).
 - **-h**: Show the help.
 

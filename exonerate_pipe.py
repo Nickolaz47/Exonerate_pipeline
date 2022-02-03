@@ -89,7 +89,8 @@ def clean_geneset():
 
 def organize_results():
     """
-    This function organizes the results in perfect, not perfect and not aligned.
+    This function organizes the results in perfect, not perfect and not
+    aligned.
     :return:
     """
     os.chdir(os.path.join(os.getcwd(), 'results'))
@@ -137,7 +138,7 @@ def count_alignments():
     return count_dic
 
 
-def pipe(query, target, mode, cores=4):
+def pipe(query, target, mode, cores):
     """
     This function runs the complete pipeline.
     :param query: Fasta query
@@ -187,7 +188,8 @@ if __name__ == '__main__':
     parser = ArgumentParser(description='It runs the Exonerate pipeline.')
     parser.add_argument('-q', required=True, help='Fasta query')
     parser.add_argument('-t', required=True, help='Fasta subject')
-    parser.add_argument('-c', required=True, help='Number of cores to use')
+    parser.add_argument('-c', required=False, help='Number of cores to use',
+                        default='8', type=int)
     parser.add_argument('-m', required=True, choices=['mrna', 'ptn'],
                         help='Mode to align the queries to target. mrna -> '
                              'nucleotide x nucleotide; ptn -> aminoacid x '
@@ -195,4 +197,4 @@ if __name__ == '__main__':
     # Parsing the arguments
     args = parser.parse_args()
     # Running the pipeline
-    pipe(args.q, args.t, args.m, int(args.c))
+    pipe(args.q, args.t, args.m, args.c)
